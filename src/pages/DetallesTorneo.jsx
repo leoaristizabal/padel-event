@@ -73,6 +73,17 @@ const DetallesTorneo = () => {
           </div>
 
           {/* FORM */}
+          <form className='flex flex-col gap-y-3'>
+            <input className='border border-gray-300 focus:border-green-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Nombre*'/>
+            <input className='border border-gray-300 focus:border-green-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Correo*'/>
+            <input className='border border-gray-300 focus:border-green-700 outline-none rounded w-full px-4 h-14 text-sm' type="text" placeholder='Telefono*'/>
+            
+            <textarea className='border border-gray-300 focus:border-green-700 outline-none resize-none rounded w-full p-4 h-36 text-sm text-gray-400' placeholder='Mensaje*'></textarea>
+            <div className='flex gap-x-2 '>
+              <button className='bg-green-700 hover:bg-green-800 text-white rounded p-4 text-sm w-full transition'>Enviar Mensaje</button>
+              <button className='border border-green-700 text-green-700 hover:border-green-500 hover:text-green-500 rounded p-4 text-sm w-full transition'>Llamar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
