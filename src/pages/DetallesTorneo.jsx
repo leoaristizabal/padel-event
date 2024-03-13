@@ -8,7 +8,7 @@ import { torneosData } from '../data';
 import { useParams } from 'react-router-dom';
 
 //iconos
-import { BiAlarm, BiCalendar, BiMap, BiMapAlt, BiMapPin, BiMoney, BiSolidMap, BiTask } from "react-icons/bi";
+import { BiAlarm, BiCalendar, BiMap,  BiTennisBall } from "react-icons/bi";
 
 //importar Link
 import {Link} from 'react-router-dom';
@@ -29,8 +29,8 @@ const DetallesTorneo = () => {
       <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
         <div>
           <h2 className='text-2xl font-semibold'>{torneo.name}</h2>
-          <div className='flex gap-1 items-baseline'>
-          <BiMap/>
+          <div className='flex'>
+          <BiMap className='text-xl text-gray-500'/>
           <h3 className='text-lg mb-4 '>{torneo.club}</h3>
           </div>
         </div>
@@ -55,8 +55,8 @@ const DetallesTorneo = () => {
             <div>{torneo.hora}</div>
             </div>
             <div className='flex gap-x-2 items-center'>
-            <BiTask className='text-2xl'/>
-            <div>{torneo.organizador.name}</div>
+            <BiTennisBall className='text-2xl'/>
+            <div>{torneo.duplas} Duplas</div>
             </div>
           </div>
           <div >{torneo.description}</div>
@@ -68,9 +68,11 @@ const DetallesTorneo = () => {
             </div>
             <div className='font-bold text-lg'>
               <div>{torneo.organizador.name}</div>
-              <Link to='' className='text-green-700 text-sm'> Ver Torneos del organizador</Link>
+              <Link to='' className='text-green-700 text-sm'> Ver torneos del organizador</Link>
             </div>
           </div>
+
+          {/* FORM */}
         </div>
       </div>
     </div>
