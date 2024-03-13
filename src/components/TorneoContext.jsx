@@ -25,7 +25,7 @@ const TorneoContextProvider = ({ children }) => {
       //mapeo para encontrar cada torneo por separado del array Torneos data llamandolo solo torneo
       return torneo.club; //despues devuelve el club de cada objeto por serado denominado torneo.
     });
-    console.log(allClubes);
+    //console.log(allClubes);
 
     //En caso de haber clubes duplicados, los borramos/removemos (por ahora no hay):
 
@@ -45,7 +45,7 @@ const TorneoContextProvider = ({ children }) => {
       return torneo.categoria; //devuelvo la categoria de cada objeto por separado.
     });
 
-    console.log(allCategorias);
+    //console.log(allCategorias);
 
     const categoriaUnicas = [
       "Categorias Disponibles (Todos)",

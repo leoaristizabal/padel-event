@@ -23,7 +23,7 @@ const App = () => {
       <Routes>
         {/* componente Routes para manejar las rutas*/}
         <Route path="/" element={<Home />} />
-        <Route path="/torneo/:id" element={<DetallesTorneo />} />{" "}
+        <Route path="/categoria/:id" element={<DetallesTorneo />} />{" "}
         {/**Puede ser un carrito o lo que sea */}
         {/*Ruta para la pagina DetalleTorneo usando el id como parametro de ruta para identificar un torneo especifico*/}
       </Routes>
