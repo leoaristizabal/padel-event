@@ -19,16 +19,16 @@ const MesDropdown = () => {
         onClick={() => setEstaAbierto(!estaAbierto)}
         className="dropdown-btn w-full text-left"
       >
-        <RiCalendar2Line className="dropdown-icon-primary" />
+        <RiCalendar2Line className="dropdown-icon-primary text-secondary" />
         <div>
           <div className="text-[15px] font-medium leading-tight">{mes}</div>
           <div className="text-[13px]">Seleccionar Mes</div>
         </div>
         {/* Icono de flecha que indica si el menú está abierto o cerrado */}
         {estaAbierto ? (
-          <RiArrowUpSLine className="dropdown-icon-secondary" />
+          <RiArrowUpSLine className="dropdown-icon-secondary text-secondary" />
         ) : (
-          <RiArrowDownSLine className="dropdown-icon-secondary" />
+          <RiArrowDownSLine className="dropdown-icon-secondary text-secondary" />
         )}
       </Menu.Button>
 

@@ -17,7 +17,7 @@ const Banner = () => {
         <div className="lg:ml-8 xl:ml-[135px] flex flex-col items-center lg:items-start text-center lg:text-left justify-center flex-1 px-4 lg:px-0">
           {/* Título del banner con estilos de texto y color específicos */}
           <h1 className="text-4xl lg:text-[58px] font-semibold leading-none mb-6">
-            <span className="text-green-700">Tu Torneo Personalizado</span> con
+            <span className="text-secondary">Tu Torneo Personalizado</span> con
             Nosotros!
           </h1>
           {/* Párrafo descriptivo con ancho máximo y margen inferior */}

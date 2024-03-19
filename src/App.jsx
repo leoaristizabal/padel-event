@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 //importar paginas
 
@@ -27,6 +28,7 @@ const App = () => {
         {/**Puede ser un carrito o lo que sea */}
         {/*Ruta para la pagina DetalleTorneo usando el id como parametro de ruta para identificar un torneo especifico*/}
       </Routes>
+      <Contact/>
       <Footer />
     </div>
   );

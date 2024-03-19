@@ -25,7 +25,7 @@ const Search = () => {
 
       {/* Botón de búsqueda con icono */}
       <button onClick={()=> handleClick()} 
-      className="bg-green-700 hover:bg-green-800 transition w-full lg:max-w-[162px] h-16 rounded-lg flex justify-center items-center text-white text-lg">
+      className="bg-secondary  hover:bg-green-500 transition w-full lg:max-w-[162px] h-16 rounded-lg flex justify-center items-center text-white text-lg">
         <RiSearch2Line />
       </button>
     </div>

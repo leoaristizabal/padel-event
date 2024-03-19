@@ -21,7 +21,7 @@ const TorneoList = () => {
   //si loading es true
 
   if (loading) {
-    return(<ImSpinner2 className='mx-auto animate-spin text-green-700 text-4xl mt-[200px]'/>)
+    return(<ImSpinner2 className='mx-auto animate-spin text-secondary text-4xl mt-[200px]'/>)
   }
 
   if (torneos.length < 1) {

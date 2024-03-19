@@ -18,16 +18,16 @@ const CategoriaDropdown = () => {
         onClick={() => setEstaAbierto(!estaAbierto)}
         className="dropdown-btn w-full text-left"
       >
-        <RiMedalLine className="dropdown-icon-primary" />
+        <RiMedalLine className="dropdown-icon-primary text-secondary" />
         <div>
           <div className="text-[15px] font-medium leading-tight">{categoria}</div>
           <div className="text-[13px]">Seleccionar Categoria</div>
         </div>
         {/* Icono de flecha que indica si el menú está abierto o cerrado */}
         {estaAbierto ? (
-          <RiArrowUpSLine className="dropdown-icon-secondary" />
+          <RiArrowUpSLine className="dropdown-icon-secondary text-secondary" />
         ) : (
-          <RiArrowDownSLine className="dropdown-icon-secondary" />
+          <RiArrowDownSLine className="dropdown-icon-secondary text-secondary" />
         )}
       </Menu.Button>
 

@@ -10,12 +10,12 @@ const Menu = () => {
   };
 
   return (
-    <div className="absolute top-4 right-4 transition">
+    <div className="lg:hidden absolute top-4 right-0 transition">
 
     <button
-        className="text-green-700
-         hover:text-green-500
-          focus:text-green-500 
+        className=" text-green-500
+         hover:text-green-700
+          focus:text-green-700 
           focus:outline-none
           transition absolute right-4"
         onClick={toggleMenu}
@@ -43,11 +43,11 @@ const Menu = () => {
 
 
       {isOpen && (
-        <div className="flex-row border rounded bg-green-700">
+        <div className="flex-row border rounded bg-green-500">
 
           <Link
             className="block px-4 py-2 text-white hover:bg-green-500"
-            to="{/*OJO AQUIII BACKEND*/}"
+            to="/"
           >
             Home
           </Link>
@@ -68,7 +68,6 @@ const Menu = () => {
             className="block px-4 py-2 text-white hover:bg-green-500"
             to="{/*OJO AQUIII BACKEND*/}"
           >
-            {" "}
             Iniciar Sesion
           </Link>
           <Link
