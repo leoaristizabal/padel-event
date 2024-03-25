@@ -23,7 +23,7 @@ const Header = () => {
           <Link className=' hover:text-secondary transition' to='/'> Home</Link>
           <Link className=' hover:text-secondary transition' to='{/*OJO AQUIII BACKEND*/}'> Crear Torneo</Link>
           <Link className=' hover:text-secondary transition' to='{/*OJO AQUIII BACKEND*/}'> Buscar</Link>
-          <Link className=' hover:text-secondary transition' to='{/*OJO AQUIII BACKEND*/}'> Contact</Link>
+          <Link className=' hover:text-secondary transition' to='Contact'> Contact</Link>
 
           </div>
 
