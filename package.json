@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@headlessui/react": "^1.7.18",
     "@react-three/drei": "^9.102.3",
     "@react-three/fiber": "^8.15.19",

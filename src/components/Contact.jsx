@@ -1,10 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Mapa from "./Mapa";
+
+import emailjs from "@emailjs/browser";
 
 import { RiMailAddFill, RiPhoneFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  //estado para confirmacion de mensaje enviado
+  const [envioExitoso, setEnvioExitoso] = useState(false);
+
+  //logica de emailjs para el form
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    //logica dada por emailjs que serai mi handleSubmit!
+    emailjs
+      .sendForm("service_wlykl4i", "template_20pnp5e", form.current, {
+        publicKey: "pZjex6foYr6bOFZbH",
+      })
+      .then(() => {
+        setEnvioExitoso(true);
+        // Restablecer el estado del formulario manualmente
+        setFormData({
+          nombre: "",
+          correo: "",
+          telefono: "",
+          mensaje: "",
+        });
+        // Después de 3 segundos, ocultar el mensaje de éxito
+        setTimeout(() => {
+          setEnvioExitoso(false);
+        }, 3000);
+      });
+  };
+
   // Estado para almacenar los valores de los campos del formulario y los errores de validación
   const [formData, setFormData] = useState({
     nombre: "",
@@ -59,10 +91,13 @@ const Contact = () => {
   };
 
   // Manejar envío del formulario
-  const handleSubmit = (e) => {
+  {
+    /*const handleSubmit = (e) => {
     e.preventDefault();
     // Aqui debbe ir la logica para enviar el formulario si no hay errores (emailjs????)
-  };
+    //QUITE EL onSubmit = {handleSubmit} para agregar el de emailjs (onSubmit={sendEmail})
+  };*/
+  }
 
   return (
     <>
@@ -78,7 +113,11 @@ const Contact = () => {
             ¿Cómo podemos ayudarte?
           </span>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-y-4 ">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col gap-y-4 "
+          >
             <input
               className={`border border-gray-300 focus:border-green-700 outline-none rounded w-full px-4 h-14 text-sm ${
                 errors.nombre && "border-red-500"
@@ -139,6 +178,14 @@ const Contact = () => {
               </button>
             </div>
           </form>
+        </div>
+
+        <div className="text-2xl font-semibold text-secondary text-center mb-4">
+          {envioExitoso && (
+            <span>
+              ¡Mensaje enviado con éxito!
+            </span>
+          )}
         </div>
 
         <div className="lg:flex flex-col flex-grow">
