@@ -10,7 +10,7 @@ function Mapa() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <Marker position={[8.618955631160823, -70.25615271176467]}>
-        <Popup className='text-secondary'>
+        <Popup className="text-secondary">
           PadelEvent Sede Alto Barinas
         </Popup>
       </Marker>
